@@ -9,7 +9,7 @@ const userRoutes = require("./routes/user");
 
 const connectToDb = require("./DB/connectToDb");
 
-const  app = express();
+const { app, server } = require("./socket/socket");
 
 dotenv.config();
 app.use(cors({
@@ -26,7 +26,7 @@ app.use("/api/auth",authRoutes);
 app.use("/api/message",messageRoutes);
 app.use("/api/users", userRoutes);
 
-app.listen(Port,()=> {
+server.listen(Port,()=> {
     connectToDb()
     console.log(`App running on port ${Port}`)
 });

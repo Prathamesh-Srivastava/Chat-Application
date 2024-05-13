@@ -1,8 +1,10 @@
 import GetMessagesHook from "../../Hooks/getMessages";
+import ListenMessageHook from "../../Hooks/listenMessages";
 import SingleMessage from "./SingleMessage";
 import MessageSkeleton from "./Skeleton";
 const ChatMessages = () =>{
     const {loading, messages} = GetMessagesHook();
+    ListenMessageHook();
     console.log("messages: ",messages);
     return (
         <div className="px-4 flex-1 overflow-auto">
