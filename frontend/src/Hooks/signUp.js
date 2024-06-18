@@ -20,7 +20,7 @@ const SignUpHook = ()=>{
             //     body: JSON.stringify({fullName, userName, password, confirmPassword, gender})
             // });
 
-            const res = await axios.post("http://localhost:5000/api/auth/signup",
+            const res = await axios.post("/api/auth/signup",
             {fullName, userName, password, confirmPassword, gender},{ withCredentials:true});
 
             const data = await res.data;

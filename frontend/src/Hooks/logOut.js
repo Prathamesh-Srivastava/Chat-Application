@@ -15,7 +15,7 @@ const LogOutHook = ()=>{
             //     headers:{"Content-type": "application/json"}
             // });
 
-            const res = await axios.post("http://localhost:5000/api/auth/logout",{},{withCredentials:true});
+            const res = await axios.post("/api/auth/logout",{},{withCredentials:true});
 
             const data = res.data;
 

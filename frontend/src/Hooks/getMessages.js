@@ -11,7 +11,7 @@ const GetMessagesHook = ()=>{
         const getMessages = async()=>{
             setLoading(true);
             try {
-                const res = await axios.get(`http://localhost:5000/api/message/${selectedConversation._id}`,{ withCredentials: true });
+                const res = await axios.get(`/api/message/${selectedConversation._id}`,{ withCredentials: true });
                 const data = res.data;
 
                 setMessages(data);

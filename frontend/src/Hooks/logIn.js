@@ -19,7 +19,7 @@ const LogInHook = ()=>{
             //     body: JSON.stringify({userName,password})
             // });
 
-            const res= await axios.post("http://localhost:5000/api/auth/login",{userName, password},{ withCredentials: true });
+            const res= await axios.post("/api/auth/login",{userName, password},{ withCredentials: true });
             
             // console.log(res); 
             
